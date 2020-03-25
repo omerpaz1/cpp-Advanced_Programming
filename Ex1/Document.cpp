@@ -6,7 +6,6 @@ using namespace std;
 
 
 Document::Document() {
-
    Slash = "";
 
 };
@@ -46,12 +45,13 @@ void Document::readLine(){ // a
             if(line != ""  && line.at(0) == '.'){
             text = false;
             }
-        else {    
+        else { 
         tempiter=myDocument.begin()+LineNumber;
         LineNumber++;
         myDocument.insert(tempiter,line);
         }
    }
+        //tempiter=myDocument.begin()-1;
 
 
 }
@@ -67,7 +67,7 @@ void Document::insertBefore(){ // i
             if(line != ""  && line.at(0) == '.'){
             text = false;
         }
-        else {
+            else {
         tempiter=myDocument.begin()+LineNumber;
         LineNumber++;
         myDocument.insert(tempiter-1,line);
@@ -145,7 +145,7 @@ void Document::searchBackwards(string s){  // '?text'
                 cout << *it << endl;
                 itForSlesh = it;
                 tempiter=it;
-                update();
+                //update();
                 break;
             }
         }

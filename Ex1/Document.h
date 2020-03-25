@@ -12,7 +12,7 @@ public:
     string Slash = "";
 
     vector<string>::iterator itForSlesh; // for / function "/"
-    int LineNumber = 0;
+    int LineNumber;
     Document();
     vector<string>::iterator getLine(int);
     void readLine(); // a
